@@ -25,36 +25,67 @@
         width: 500px;
         margin: auto;
       }
+
+      .baby-img {
+        width: 500px;
+        height: 300px;
+
+        background-image: url("http://newsimg.hankookilbo.com/2019/04/29/201904291390027161_3.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
       .family-info {
-            width: 100px;
+            width: 250px;
       }
     </style>
 
     <script>
       function familyinfo() {
-        alert('입력되었습니다.')
+        alert('주문이 완료되었습니다.')
       }
     </script>
 </head>
 <body>
   <div class="wrap">
-    <label class="btn btn-secondary">사진 업로드 <input type="file" hidden>
-    </label>
+    <div class="baby-img"></div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">사진</span>
+      </div>
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="inputGroupFile01">
+        <label class="custom-file-label" for="inputGroupFile01">사진을 첨부해주세요</label>
+      </div>
+    </div>
+
     <div class="family-info">
-      <p>가족정보</p>
-      <div class="form-group">
-        <label>아버지</label>
-        <input type="email" class="form-control">
+      <h5 style="font-weight: bold">가족 정보</h5>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">아버지</span>
+        </div>
+        <input type="text" class="form-control" placeholder="정보를 입력하세요" aria-label="Username"
+               aria-describedby="basic-addon1">
       </div>
-      <div class="form-group">
-        <label>어머니</label>
-        <input type="email" class="form-control">
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">어머니</span>
+        </div>
+        <input type="text" class="form-control" placeholder="정보를 입력하세요" aria-label="Username"
+               aria-describedby="basic-addon1">
       </div>
-      <div class="form-group">
-        <label>자녀</label>
-        <input type="email" class="form-control">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">자녀</span>
+        </div>
+        <input type="text" class="form-control" placeholder="정보를 입력하세요" aria-label="Username"
+               aria-describedby="basic-addon1">
       </div>
-      <button onclick="familyinfo()" type="submit" class="btn btn-primary">입력</button>
+
+      <button onclick="familyinfo()" type="submit" class="btn btn-primary">주문하기</button>
     </div>
   </div>
 
